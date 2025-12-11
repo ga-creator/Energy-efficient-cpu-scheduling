@@ -99,19 +99,7 @@ Result round_robin(vector<int> at, vector<int> bt, int n, int tq, bool modified)
     return R;
 }
 
-void printResult(Result R, vector<int> at, vector<int> bt, string name){
-    cout << "\n========== " << name << " ==========\n";
-    cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT\n";
-    for(int i=0;i<at.size();i++){
-        cout << "P" << i+1 << "\t" << at[i] << "\t" << bt[i] << "\t" << R.ct[i]
-             << "\t" << R.tat[i] << "\t" << R.wt[i] << "\t" << R.rt[i] << endl;
-    }
-    cout << "\nAverage Waiting Time: " << R.avgWT << endl;
-    cout << "Average Turnaround Time: " << R.avgTAT << endl;
-    cout << "Average Response Time: " << R.avgRT << endl;
-    cout << "Context Switches: " << R.contextSwitches << endl;
-    cout << "Energy Used: " << R.energyUsed << endl;
-}
+
 
 int main(){
     int n;
